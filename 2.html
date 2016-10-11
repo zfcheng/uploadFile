@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <input type="file" name="file" id='uploadFile'>
+    <div id="cl" style="height: 50px; width: 50px;background-color: #ccc;line-height: 50px;text-align: center;">
+        upup
+    </div>
+</body>
+<!-- <script src="./uploadFile.js"></script> -->
+<script src="./ajaxfileupload.js"></script>
+<script>
+    $('#cl').on('click', function () {
+        $.ajaxFileUpload({
+            fileElementId: 'uploadFile',
+            data: {
+                loanRequestId: '8306E53C-1E25-4F83-85EA-A4790FB4ABAD',
+                name: 'vv'
+            },
+            dataType: 'json',
+            url: 'http://localhost:4001/api/v2/loan/uploadTemplate',
+            success: function (data, status) {
+                console.log('@@@', data)
+            }
+        })    
+    })
+    
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uploadFile</title>
+</head>
+<body>
+    <form  action="https://htkg.uats.cc/api/v2/loan/uploadTemplate" method="POST" name="aaaa" id="aaaaa" enctype="multipart/form-data">
+        <input type="text" name='loanRequestId' value="8306E53C-1E25-4F83-85EA-A4790FB4ABAD">
+        <input type="text" name='name' value="55">
+        <input type="file" name='file' id='_v'>
+        <!-- file id 建议写好   不完全测试 chrome 不带 id  文件传不上去
+            safari 就可以不带
+
+
+            在上传文件时，<form>标签必须加上enctype="multipart/form-data"，否则浏览器无法将文件内容上传到服务端。
+            表单中enctype="multipart/form-data"的意思，是设置表单的MIME编码。默认情况，这个编码格式是application/x-www-form-urlencoded，不能用于文件上传；只有使用了multipart/form-data，才能完整的传递文件数据，进行下面的操作. 
+            enctype="multipart/form-data"是上传二进制数据; form里面的input的值以2进制的方式传过去。 
+         -->
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
